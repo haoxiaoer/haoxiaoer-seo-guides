@@ -7,7 +7,7 @@
   <title>号小二｜全球数字商品 · 高效交付</title>
   <link rel="icon" href="https://www.haoxiaoer.com/icon.svg">
   <style>
-    :root{--orange:#f45b16;--orange-dark:#db4d0d;--ink:#101820;--muted:#718096;--line:#e6e8eb;--soft:#f7f8fa;--sidebar:256px;--top:64px}
+    :root{--orange:#f45b16;--orange-dark:#db4d0d;--ink:#101820;--muted:#718096;--line:#e6e8eb;--soft:#f7f8fa;--sidebar:256px;--top:56px}
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{margin:0;color:var(--ink);background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Arial,sans-serif;font-size:14px;line-height:1.55}
@@ -19,28 +19,35 @@
     .brand-mark{width:31px;height:31px;object-fit:contain}
     .brand-name{font-weight:800;font-size:17px;line-height:1.15}
     .brand-sub{display:block;color:#87909b;font-size:10px;font-weight:500;margin-top:2px;letter-spacing:.1px}
-    .side-label{color:#a3aab2;font-size:12px;padding:20px 13px 8px}
-    .side-nav{padding:0 8px;overflow:auto}
-    .side-link{display:flex;align-items:center;gap:11px;border-radius:7px;padding:10px 10px;color:#26313d;margin:2px 0;transition:.18s}
+    .side-label{color:#a3aab2;font-size:12px;padding:20px 13px 7px}
+    .side-nav{padding:0 16px;overflow:auto}
+    .side-link{height:36px;display:flex;align-items:center;gap:11px;border-radius:7px;padding:0 10px;color:#26313d;margin:1px 0;transition:.18s}
     .side-link:hover,.side-link.active{background:#fff2ea;color:var(--orange-dark)}
-    .side-icon{width:18px;text-align:center;color:#697582;font-size:15px}
+    .side-icon{width:18px;height:18px;display:grid;place-items:center;color:#697582;flex:0 0 18px}
+    .side-icon svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .side-icon img{width:16px;height:16px;object-fit:contain;opacity:.72}
     .side-link:hover .side-icon{color:var(--orange)}
     .side-chevron{margin-left:auto;color:#b5bbc1;font-size:11px}
-    .support{margin-top:auto;border-top:1px solid var(--line);padding:12px 10px}
-    .support-link{display:flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line);border-radius:7px;padding:9px 10px;color:#5b6570;background:#fff}
+    .support{margin-top:auto;border-top:1px solid var(--line);padding:12px 16px}
+    .support-link{display:flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line);border-radius:7px;padding:7px 10px;color:#5b6570;background:#fff}
     .content{margin-left:var(--sidebar);min-height:100vh}
-    .topbar{height:var(--top);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:17px;padding:0 26px;position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);z-index:15}
-    .collapse{border:0;background:transparent;color:#52606d;width:28px;height:32px;font-size:18px;cursor:pointer}
-    .search{margin-left:auto;display:flex;align-items:center;gap:9px;border:1px solid #dfe3e7;border-radius:7px;width:min(385px,40vw);height:38px;padding:0 12px;background:#fff}
-    .search span{color:#89929c;font-size:16px}
+    .topbar{height:var(--top);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:6px;padding:0 16px;position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);z-index:15}
+    .collapse{border:0;background:transparent;color:#52606d;width:28px;height:28px;padding:0;display:grid;place-items:center;cursor:pointer}
+    .collapse svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .search{margin-left:auto;display:flex;align-items:center;gap:0;border:1px solid #dfe3e7;border-radius:8px;width:min(384px,40vw);height:36px;padding:0 10px 0 36px;background:#fff;position:relative}
+    .search span{position:absolute;left:10px;top:50%;transform:translateY(-50%);color:#89929c;font-size:0;display:grid;place-items:center}
+    .search span svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
     .search input{border:0;outline:0;min-width:0;flex:1;font:inherit;color:#2d3743}
     .search input::placeholder{color:#a4abb3}
-    .top-action{height:38px;border:0;border-radius:7px;background:#f7f7f8;padding:0 14px;font:inherit;color:#28313c;cursor:pointer;white-space:nowrap}
+    .top-action{height:40px;border:0;border-radius:8px;background:#f7f7f8;padding:0 14px;font-size:12.8px;color:#28313c;cursor:pointer;white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+    .top-action.login-action{padding-left:6px;padding-right:16px}
+    .top-action.order{padding-left:15px;padding-right:15px}
+    .top-action.lang{padding-left:16px;padding-right:16px}
+    .top-action.login-action{padding-right:18.5px}
     .top-action:hover{background:#fff0e8;color:var(--orange-dark)}
     .lang{display:flex;gap:6px;align-items:center;color:#2b333d}
     .lang .flag{font-size:16px}
-    .avatar{width:31px;height:31px;border-radius:50%;border:1px solid #e5e7ea;background:#fff1e8;color:var(--orange-dark);display:grid;place-items:center;font-weight:700;margin-left:2px}
-    .main{max-width:1216px;margin:0 auto;padding:24px 0 58px}
+    .main{max-width:1216px;margin:0 auto;padding:32px 0 58px}
     .hero{border:1px solid var(--line);border-radius:5px;overflow:hidden;display:grid;grid-template-columns:42.5% 57.5%;background:#fff}
     .hero-copy{height:253px;padding:28px 35px 26px;display:flex;flex-direction:column;justify-content:center}
     .hero h1{font-size:36px;line-height:1.25;letter-spacing:-.8px;margin:0 0 14px;font-weight:800}
@@ -50,15 +57,19 @@
     .button:hover{border-color:#f4b18d;color:var(--orange-dark);background:#fffaf7}
     .button.primary{background:var(--orange);border-color:var(--orange);color:#fff;box-shadow:0 2px 4px rgba(244,91,22,.18)}
     .button.primary:hover{background:var(--orange-dark);border-color:var(--orange-dark);color:#fff}
-    .hero-image{height:253px;min-height:0;background:#f3f5f6;overflow:hidden}
-    .hero-image img{width:100%;height:253px;min-height:0;object-fit:cover;object-position:center}
+    .hero-image{height:253px;min-height:0;background:#f3f5f6;overflow:hidden;position:relative}
+    .hero-slide{position:absolute;inset:0;opacity:0;transition:opacity .7s ease;pointer-events:none}
+    .hero-slide.is-active{opacity:1;pointer-events:auto}
+    .hero-slide img{width:100%;height:100%;object-fit:cover;object-position:center}
     .metrics{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-top:0;border-radius:0 0 5px 5px;overflow:hidden}
     .metric{display:flex;align-items:center;gap:12px;padding:16px;border-right:1px solid var(--line);min-height:82px}
     .metric:last-child{border-right:0}
     .metric-icon{width:36px;height:36px;display:grid;place-items:center;border:1px solid #ffd0b7;border-radius:6px;color:var(--orange);font-size:18px;background:#fffaf7}
+    .metric-icon svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
     .metric-value{font-size:24px;font-weight:750;line-height:1.1}
     .metric-label{display:block;color:#788391;font-size:12px;margin-top:3px}
     .section{margin-top:40px}
+    .section[aria-labelledby="categories-title"]{margin-top:37.5px}
     .section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:14px}
     .section h2{font-size:23px;line-height:1.25;margin:0;font-weight:800}
     .section-lead{color:#84909d;margin:5px 0 0}
@@ -68,23 +79,31 @@
     .category:nth-child(3n){border-right:0}
     .category:nth-last-child(-n+3){border-bottom:0}
     .category:hover{background:#fffaf7;color:var(--orange-dark)}
-    .category-icon{font-size:19px;color:#4a5661;width:22px;text-align:center}
+    .category-icon{width:22px;height:22px;display:grid;place-items:center;color:#4a5661;flex:0 0 22px}
+    .category-icon svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .category-icon img{width:17px;height:17px;object-fit:contain}
     .category:hover .category-icon{color:var(--orange)}
+    .category.more{justify-content:center;background:#f3f3f3;color:#3f454b;font-weight:600;gap:12px}
+    .category.more:hover{background:#ececec;color:#20262d}
+    .more-socials{display:flex;align-items:center;margin-left:1px}
+    .more-socials span{width:28px;height:28px;display:grid;place-items:center;border:1px solid #dfe2e5;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(20,30,40,.05);margin-left:-4px}
+    .more-socials img{width:14px;height:14px;object-fit:contain;filter:grayscale(1);opacity:.7}
     .category-main{min-width:0;flex:1}
     .category-title{display:block;font-size:15px;font-weight:700;color:#17212b}
     .category-desc{display:block;font-size:12px;color:#8a949f;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
     .category-count{font-size:12px;color:#9099a2;white-space:nowrap}
     .arrow{color:#a2aab2;margin-left:2px}
-    .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
-    .review{border:1px solid var(--line);border-radius:5px;padding:18px;background:#fff;min-height:164px}
-    .review-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+    .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .review{border:1px solid var(--line);border-radius:5px;padding:20px;background:#fff;min-height:240px;display:flex;flex-direction:column}
+    .review-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
     .review-person{display:flex;align-items:center;gap:10px}
     .review-avatar{width:34px;height:34px;border-radius:50%;background:#fff1e8;color:var(--orange-dark);display:grid;place-items:center;font-weight:700}
     .review-name{font-weight:700;color:#28323c}
     .review-date{font-size:11px;color:#a0a8b0;margin-top:1px}
     .rating{color:#eb7e24;font-size:12px;letter-spacing:1px}
-    .review-text{font-size:13px;line-height:1.7;color:#55616e;margin:0 0 13px}
-    .review-tag{display:inline-block;color:#78838f;border:1px solid #e6e9ed;border-radius:4px;padding:2px 7px;font-size:11px}
+    .review-text{font-size:13px;line-height:1.7;color:#55616e;margin:0 0 16px}
+    .review-tag{display:flex;align-items:center;gap:8px;margin-top:auto;color:#78838f;background:#f7f8fa;border-radius:6px;padding:10px 12px;font-size:11px}
+    .review-tag::before{content:"";width:18px;height:18px;background:url("https://www.haoxiaoer.com/product-icons/email.svg") center/contain no-repeat;opacity:.7}
     .blog-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
     .blog-card{border:1px solid var(--line);border-radius:5px;overflow:hidden;background:#fff;transition:.18s}
     .blog-card:hover{box-shadow:0 6px 20px rgba(31,42,55,.08);transform:translateY(-2px)}
@@ -101,7 +120,7 @@
     .footer-brand{display:flex;gap:10px;align-items:flex-start}.footer-brand .brand-mark{width:28px}.payment-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:11px}.payment-row img{height:23px;width:auto}.legal{border-top:1px solid var(--line);margin-top:25px;padding-top:15px;display:flex;justify-content:space-between;gap:15px;font-size:12px;color:#9aa2ab}.legal-links{display:flex;gap:15px}
     .mobile-menu{display:none}
     @media (max-width:1000px){:root{--sidebar:210px}.main{padding-left:25px;padding-right:25px}.hero h1{font-size:30px}.blog-grid{grid-template-columns:repeat(2,1fr)}.footer{margin-left:-25px;margin-right:-25px;padding-left:25px;padding-right:25px}.footer-grid{grid-template-columns:repeat(2,1fr)}}
-    @media (max-width:760px){:root{--sidebar:0px}.sidebar{display:none}.content{margin-left:0}.topbar{padding:0 14px;gap:8px}.collapse{display:none}.mobile-menu{display:block;border:0;background:transparent;font-size:19px;color:#596572}.search{width:auto;flex:1;margin-left:0}.search input{font-size:13px}.top-action.order,.lang{display:none}.main{padding:18px 14px 40px}.hero{display:block}.hero-copy{height:auto;padding:24px 20px}.hero h1{font-size:29px}.hero p{font-size:14px;line-height:1.7}.hero-image,.hero-image img{min-height:190px;height:190px}.metrics{grid-template-columns:repeat(2,1fr)}.metric{min-height:70px;padding:12px}.metric:nth-child(2){border-right:0}.metric:nth-child(-n+2){border-bottom:1px solid var(--line)}.metric-value{font-size:21px}.categories{grid-template-columns:1fr}.category{border-right:0!important;border-bottom:1px solid var(--line)!important}.category:last-child{border-bottom:0!important}.review-grid{grid-template-columns:1fr}.blog-grid{grid-template-columns:1fr 1fr;gap:10px}.blog-image{height:100px}.blog-body{padding:10px}.blog-title{font-size:13px}.subscribe{display:block;padding:18px}.subscribe-form{min-width:0;margin-top:14px}.footer{margin-left:-14px;margin-right:-14px;padding:28px 14px 18px}.footer-grid{grid-template-columns:1fr 1fr;gap:24px 16px}.footer-grid>div:first-child{grid-column:1/-1}.legal{display:block}.legal-links{margin-top:8px}}
+    @media (max-width:760px){:root{--sidebar:0px}.sidebar{display:none}.content{margin-left:0}.topbar{padding:0 14px;gap:8px}.collapse{display:none}.mobile-menu{display:block;border:0;background:transparent;font-size:19px;color:#596572}.search{width:auto;flex:1;margin-left:0}.search input{font-size:13px}.top-action.order,.lang{display:none}.main{padding:18px 14px 40px}.hero{display:block}.hero-copy{height:auto;padding:24px 20px}.hero h1{font-size:29px}.hero p{font-size:14px;line-height:1.7}.hero-image,.hero-slide{min-height:190px;height:190px}.metrics{grid-template-columns:repeat(2,1fr)}.metric{min-height:70px;padding:12px}.metric:nth-child(2){border-right:0}.metric:nth-child(-n+2){border-bottom:1px solid var(--line)}.metric-value{font-size:21px}.categories{grid-template-columns:1fr}.category{border-right:0!important;border-bottom:1px solid var(--line)!important}.category:last-child{border-bottom:0!important}.review-grid{grid-template-columns:1fr}.blog-grid{grid-template-columns:1fr 1fr;gap:10px}.blog-image{height:100px}.blog-body{padding:10px}.blog-title{font-size:13px}.subscribe{display:block;padding:18px}.subscribe-form{min-width:0;margin-top:14px}.footer{margin-left:-14px;margin-right:-14px;padding:28px 14px 18px}.footer-grid{grid-template-columns:1fr 1fr;gap:24px 16px}.footer-grid>div:first-child{grid-column:1/-1}.legal{display:block}.legal-links{margin-top:8px}}
     @media (max-width:420px){.blog-grid{grid-template-columns:1fr}.hero-actions .button{flex:1}.top-action{padding:0 9px}.footer-grid{grid-template-columns:1fr}}
   </style>
 </head>
@@ -114,29 +133,29 @@
       </a>
       <div class="side-label">商品分类</div>
       <nav class="side-nav" aria-label="商品分类">
-        <a class="side-link" href="https://www.haoxiaoer.com/products/email"><span class="side-icon">✉</span>邮箱账号<span class="side-chevron">⌄</span></a>
-        <a class="side-link" href="https://www.haoxiaoer.com/products/apple"><span class="side-icon">●</span>Apple ID</a>
-        <a class="side-link" href="https://www.haoxiaoer.com/products/social"><span class="side-icon">➤</span>社交账号</a>
-        <a class="side-link" href="https://www.haoxiaoer.com/products/giftcards"><span class="side-icon">♧</span>礼品卡密</a>
-        <a class="side-link" href="https://www.haoxiaoer.com/products/smm"><span class="side-icon">↗</span>粉丝增长</a>
-        <a class="side-link" href="https://www.haoxiaoer.com/products/ai"><span class="side-icon">▣</span>AI 工具</a>
-        <a class="side-link" href="https://www.haoxiaoer.com/products/sim"><span class="side-icon">▯</span>海外手机卡</a>
-        <a class="side-link" href="https://www.haoxiaoer.com/products/membership"><span class="side-icon">♕</span>会员代开</a>
-        <a class="side-link" href="https://www.haoxiaoer.com/custom-request"><span class="side-icon">⊞</span>需求定制</a>
+        <a class="side-link" href="https://www.haoxiaoer.com/products/email"><span class="side-icon"><svg viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.5 5.5a2 2 0 0 1-2 0L2 7"/></svg></span>邮箱账号<span class="side-chevron">⌄</span></a>
+        <a class="side-link" href="https://www.haoxiaoer.com/products/apple"><span class="side-icon"><img src="https://www.haoxiaoer.com/product-icons/apple.svg" alt=""></span>Apple ID</a>
+        <a class="side-link" href="https://www.haoxiaoer.com/products/social"><span class="side-icon"><svg viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></span>社交账号</a>
+        <a class="side-link" href="https://www.haoxiaoer.com/products/giftcards"><span class="side-icon"><svg viewBox="0 0 24 24"><path d="M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 1 1 2.5-2.5C10 6 12 7 12 7Z"/><path d="M12 7h4.5A2.5 2.5 0 1 0 14 4.5C14 6 12 7 12 7Z"/></svg></span>礼品卡密</a>
+        <a class="side-link" href="https://www.haoxiaoer.com/products/smm"><span class="side-icon"><svg viewBox="0 0 24 24"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg></span>粉丝增长</a>
+        <a class="side-link" href="https://www.haoxiaoer.com/products/ai"><span class="side-icon"><svg viewBox="0 0 24 24"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg></span>AI 工具</a>
+        <a class="side-link" href="https://www.haoxiaoer.com/products/sim"><span class="side-icon"><svg viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg></span>海外手机卡</a>
+        <a class="side-link" href="https://www.haoxiaoer.com/products/membership"><span class="side-icon"><svg viewBox="0 0 24 24"><path d="m2 5 4 4 6-7 6 7 4-4-3 14H5Z"/><path d="M5 19h14"/></svg></span>会员代开</a>
+        <a class="side-link" href="https://www.haoxiaoer.com/custom-request"><span class="side-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7.8a2 2 0 0 0-1.4.6L3 20.9V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/><path d="M12 8v6M9 11h6"/></svg></span>需求定制</a>
       </nav>
-      <div class="support"><a class="support-link" href="https://www.haoxiaoer.com/dashboard/tickets">◉&nbsp; 联系客服</a></div>
+      <div class="support"><a class="support-link" href="https://www.haoxiaoer.com/dashboard/tickets"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M3 18v-6a9 9 0 0 1 18 0v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M3 17h3v4H5a2 2 0 0 1-2-2Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M21 17h-3v4h1a2 2 0 0 0 2-2Z" fill="none" stroke="currentColor" stroke-width="2"/></svg>联系客服</a></div>
     </aside>
 
     <div class="content">
       <header class="topbar">
         <button class="mobile-menu" type="button" aria-label="打开菜单">☰</button>
-        <button class="collapse" type="button" aria-label="切换侧栏">▥</button>
+        <button class="collapse" type="button" aria-label="切换侧栏"><svg viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/></svg></button>
         <form class="search" action="https://www.haoxiaoer.com/search" method="get">
-          <span>⌕</span><input name="q" type="search" placeholder="搜索账号、礼品卡、服务…" aria-label="搜索账号、礼品卡、服务">
+          <span><svg viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg></span><input name="q" type="search" placeholder="搜索账号、礼品卡、服务…" aria-label="搜索账号、礼品卡、服务…">
         </form>
         <a class="top-action order" href="https://www.haoxiaoer.com/orders">订单查询</a>
         <a class="top-action lang" href="https://www.haoxiaoer.com/"><span class="flag">🇨🇳</span>ZH</a>
-        <a class="top-action" href="https://www.haoxiaoer.com/login">登录 / 注册</a>
+        <a class="top-action login-action" href="https://www.haoxiaoer.com/login"><svg class="login-icon" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="4" fill="none" stroke="currentColor" stroke-width="2"/></svg>登录 / 注册</a>
       </header>
 
       <main class="main">
@@ -146,27 +165,31 @@
             <p>精选 Gmail、Apple ID、Telegram、WhatsApp 等数字账号，以及礼品卡与海外通信产品。实时库存、批量采购，付款后极速交付。</p>
             <div class="hero-actions"><a class="button primary" href="https://www.haoxiaoer.com/search">浏览全部商品&nbsp; →</a><a class="button" href="https://www.haoxiaoer.com/products/email">查看热销精选</a></div>
           </div>
-          <a class="hero-image" href="https://www.haoxiaoer.com/products/giftcards"><img src="https://www.haoxiaoer.com/images/blog/giftcard-redeem-guide.png" alt="礼品卡兑换指南"></a>
+          <div class="hero-image" data-hero-carousel aria-label="首页资讯轮播">
+            <div class="hero-slide is-active"><img src="https://www.haoxiaoer.com/images/blog/sim-activation-guide.png" alt="海外实体 SIM 卡激活教程"></div>
+            <div class="hero-slide"><img src="https://www.haoxiaoer.com/images/blog/giftcard-redeem-guide.png" alt="礼品卡兑换指南"></div>
+            <div class="hero-slide"><img src="https://www.haoxiaoer.com/images/blog/social-account-login.png" alt="社交账号安全登录指南"></div>
+          </div>
         </section>
         <section class="metrics" aria-label="平台数据">
-          <div class="metric"><span class="metric-icon">🛒</span><span><strong class="metric-value">7</strong><span class="metric-label">累计订单</span></span></div>
-          <div class="metric"><span class="metric-icon">▧</span><span><strong class="metric-value">9</strong><span class="metric-label">在售商品</span></span></div>
-          <div class="metric"><span class="metric-icon">◷</span><span><strong class="metric-value">0 秒</strong><span class="metric-label">平均发货</span></span></div>
-          <div class="metric"><span class="metric-icon">♢</span><span><strong class="metric-value">100%</strong><span class="metric-label">自动发货率</span></span></div>
+          <div class="metric"><span class="metric-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="20" r="1"/><circle cx="19" cy="20" r="1"/><path d="M3 4h2l2.4 11.4a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 1.9-1.4L21 8H6"/></svg></span><span><strong class="metric-value">7</strong><span class="metric-label">累计订单</span></span></div>
+          <div class="metric"><span class="metric-icon"><svg viewBox="0 0 24 24"><path d="m7.5 4.3 9 0 3.5 3.4v9.8L16.5 21h-9l-3.5-3.5V7.7Z"/><path d="M4 8h16M12 4.3v3.7M12 12v4"/></svg></span><span><strong class="metric-value">9</strong><span class="metric-label">在售商品</span></span></div>
+          <div class="metric"><span class="metric-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l2.5 2.5"/></svg></span><span><strong class="metric-value">0 秒</strong><span class="metric-label">平均发货</span></span></div>
+          <div class="metric"><span class="metric-icon"><svg viewBox="0 0 24 24"><path d="M12 3 20 6v5c0 5-3.4 8.5-8 10-4.6-1.5-8-5-8-10V6Z"/><path d="m9 12 2 2 4-4"/></svg></span><span><strong class="metric-value">100%</strong><span class="metric-label">自动发货率</span></span></div>
         </section>
 
         <section class="section" aria-labelledby="categories-title">
           <div class="section-head"><div><h2 id="categories-title">探索商品分类</h2><p class="section-lead">按场景浏览，快速找到适合你的规格</p></div></div>
           <div class="categories">
-            <a class="category" href="https://www.haoxiaoer.com/products/email"><span class="category-icon">✉</span><span class="category-main"><span class="category-title">邮箱账号</span><span class="category-desc">Gmail、Outlook、Yahoo 等</span></span><span class="category-count">2 件商品</span><span class="arrow">›</span></a>
-            <a class="category" href="https://www.haoxiaoer.com/products/apple"><span class="category-icon">●</span><span class="category-main"><span class="category-title">Apple ID</span><span class="category-desc">新号、老号、成品号</span></span><span class="category-count">1 件商品</span><span class="arrow">›</span></a>
-            <a class="category" href="https://www.haoxiaoer.com/products/social"><span class="category-icon">➤</span><span class="category-main"><span class="category-title">社交账号</span><span class="category-desc">Telegram、WhatsApp、X 等</span></span><span class="category-count">1 件商品</span><span class="arrow">›</span></a>
-            <a class="category" href="https://www.haoxiaoer.com/products/giftcards"><span class="category-icon">♧</span><span class="category-main"><span class="category-title">礼品卡密</span><span class="category-desc">iTunes、Google Play、Steam</span></span><span class="category-count">1 件商品</span><span class="arrow">›</span></a>
-            <a class="category" href="https://www.haoxiaoer.com/products/smm"><span class="category-icon">↗</span><span class="category-main"><span class="category-title">粉丝增长</span><span class="category-desc">粉丝、点赞、评论、播放量</span></span><span class="category-count">1 件商品</span><span class="arrow">›</span></a>
-            <a class="category" href="https://www.haoxiaoer.com/products/ai"><span class="category-icon">▣</span><span class="category-main"><span class="category-title">AI 工具</span><span class="category-desc">ChatGPT、Claude、Midjourney</span></span><span class="category-count">1 件商品</span><span class="arrow">›</span></a>
-            <a class="category" href="https://www.haoxiaoer.com/products/sim"><span class="category-icon">▯</span><span class="category-main"><span class="category-title">海外手机卡</span><span class="category-desc">实体卡、eSIM、接码服务</span></span><span class="category-count">1 件商品</span><span class="arrow">›</span></a>
-            <a class="category" href="https://www.haoxiaoer.com/products/streaming"><span class="category-icon">▰</span><span class="category-main"><span class="category-title">休闲娱乐</span><span class="category-desc">影音会员、游戏账号与点卡</span></span><span class="category-count">0 件商品</span><span class="arrow">›</span></a>
-            <a class="category" href="https://www.haoxiaoer.com/search"><span class="category-icon">＋</span><span class="category-main"><span class="category-title">更多商品</span><span class="category-desc">按关键词查找服务</span></span><span class="arrow">›</span></a>
+            <a class="category" href="https://www.haoxiaoer.com/products/email"><span class="category-icon"><svg viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.5 5.5a2 2 0 0 1-2 0L2 7"/></svg></span><span class="category-main"><span class="category-title">邮箱账号</span><span class="category-desc">Gmail、Outlook、Yahoo 等</span></span><span class="category-count">2 件商品</span><span class="arrow">›</span></a>
+            <a class="category" href="https://www.haoxiaoer.com/products/apple"><span class="category-icon"><img src="https://www.haoxiaoer.com/product-icons/apple.svg" alt=""></span><span class="category-main"><span class="category-title">Apple ID</span><span class="category-desc">新号、老号、成品号</span></span><span class="category-count">1 件商品</span><span class="arrow">›</span></a>
+            <a class="category" href="https://www.haoxiaoer.com/products/social"><span class="category-icon"><svg viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></span><span class="category-main"><span class="category-title">社交账号</span><span class="category-desc">Telegram、WhatsApp、X 等</span></span><span class="category-count">1 件商品</span><span class="arrow">›</span></a>
+            <a class="category" href="https://www.haoxiaoer.com/products/giftcards"><span class="category-icon"><svg viewBox="0 0 24 24"><path d="M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 1 1 2.5-2.5C10 6 12 7 12 7Z"/><path d="M12 7h4.5A2.5 2.5 0 1 0 14 4.5C14 6 12 7 12 7Z"/></svg></span><span class="category-main"><span class="category-title">礼品卡密</span><span class="category-desc">iTunes、Google Play、Steam</span></span><span class="category-count">1 件商品</span><span class="arrow">›</span></a>
+            <a class="category" href="https://www.haoxiaoer.com/products/smm"><span class="category-icon"><svg viewBox="0 0 24 24"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg></span><span class="category-main"><span class="category-title">粉丝增长</span><span class="category-desc">粉丝、点赞、评论、播放量</span></span><span class="category-count">1 件商品</span><span class="arrow">›</span></a>
+            <a class="category" href="https://www.haoxiaoer.com/products/ai"><span class="category-icon"><svg viewBox="0 0 24 24"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg></span><span class="category-main"><span class="category-title">AI 工具</span><span class="category-desc">ChatGPT、Claude、Midjourney</span></span><span class="category-count">1 件商品</span><span class="arrow">›</span></a>
+            <a class="category" href="https://www.haoxiaoer.com/products/sim"><span class="category-icon"><svg viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg></span><span class="category-main"><span class="category-title">海外手机卡</span><span class="category-desc">实体卡、eSIM、接码服务</span></span><span class="category-count">1 件商品</span><span class="arrow">›</span></a>
+            <a class="category" href="https://www.haoxiaoer.com/products/streaming"><span class="category-icon"><svg viewBox="0 0 24 24"><path d="M15 8V5a3 3 0 0 0-6 0v3"/><path d="M4 8h16l1 13H3Z"/><path d="M8 8 6 3M16 8l2-5"/></svg></span><span class="category-main"><span class="category-title">休闲娱乐</span><span class="category-desc">影音会员、游戏账号与点卡</span></span><span class="category-count">0 件商品</span><span class="arrow">›</span></a>
+            <a class="category more" href="https://www.haoxiaoer.com/search"><span>+ more</span><span class="more-socials"><span><img src="https://www.haoxiaoer.com/social-icons/x.svg" alt=""></span><span><img src="https://www.haoxiaoer.com/social-icons/telegram.svg" alt=""></span><span><img src="https://www.haoxiaoer.com/social-icons/youtube.svg" alt=""></span></span></a>
           </div>
         </section>
 
@@ -203,5 +226,17 @@
       </main>
     </div>
   </div>
+  <script>
+    (() => {
+      const slides = Array.from(document.querySelectorAll('[data-hero-carousel] .hero-slide'));
+      if (slides.length < 2) return;
+      let active = 0;
+      window.setInterval(() => {
+        slides[active].classList.remove('is-active');
+        active = (active + 1) % slides.length;
+        slides[active].classList.add('is-active');
+      }, 4200);
+    })();
+  </script>
 </body>
 </html>
