@@ -20,6 +20,26 @@
 - Telegram、WhatsApp 等社交账号：首次登录后及时检查绑定信息和安全设置，不要把验证码交给任何人。
 - 礼品卡与 AI 工具：兑换前核对国家或地区、面值、适用平台和兑换规则。
 
+## 文章专栏
+
+这里是号小二在 GitHub 仓库里的文章目录。现有内容先按主题收在下面，后续的新文章也会继续补进对应系列，查找起来更方便。
+
+### 海外账号使用
+
+- [2026 年 Gmail 账号交易平台有哪些？5 大主流平台推荐](https://www.haoxiaoer.com/blog/gmail-account-trading-platforms)
+- [美区 Apple ID 有什么用途？海外苹果账号完整介绍](https://www.haoxiaoer.com/blog/account-what-is-us-apple-id-for)
+
+### 账号采购与团队管理
+
+- [跨境团队如何高效管理海外账号？账号采购标准化实操指南](https://www.haoxiaoer.com/blog/account-guide-how-can-cross-border-teams)
+
+### 礼品卡与跨境工具
+
+- [App Store 怎么更换国家或地区？iOS 账号转区避坑与实操指南](https://www.haoxiaoer.com/blog/account-guide-how-to-change-your-app)
+- [查看更多号小二文章](https://www.haoxiaoer.com/blog)
+
+以后发布新文章时，只要把文章标题和链接加到对应系列即可；如果内容较长，也可以在仓库中新建单独的 Markdown 文件，再从这里进入。
+
 ## 购买前检查清单
 
 1. 明确自己需要的账号类型、地区和使用场景。
