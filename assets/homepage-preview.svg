@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">号小二网站首页预览</title>
+<desc id="desc">号小二全球数字商品与跨境通信服务首页预览图</desc>
+<rect width="1200" height="760" fill="#ffffff"/>
+<rect width="180" height="760" fill="#fbfbfb" stroke="#e4e6e8"/>
+<circle cx="34" cy="38" r="15" fill="#ff5b18"/>
+<path d="M25 38c6-10 14-10 19 0-5 9-13 9-19 0Z" fill="#fff"/>
+<text x="58" y="35" font-size="20" font-weight="700" fill="#17202a">号小二</text>
+<text x="58" y="53" font-size="11" fill="#78828d">全球数字商品 · 高效交付</text>
+<text x="20" y="96" font-size="12" fill="#929aa3">商品分类</text>
+<g font-size="15" fill="#25313d">
+<text x="26" y="132">✉  邮箱账号</text><text x="26" y="174">●  Apple ID</text><text x="26" y="216">➤  社交账号</text>
+<text x="26" y="258">♧  礼品卡密</text><text x="26" y="300">↗  粉丝增长</text><text x="26" y="342">▣  AI 工具</text>
+<text x="26" y="384">▯  海外手机卡</text><text x="26" y="426">♔  会员代开</text><text x="26" y="468">⊞  需求定制</text>
+</g>
+<rect x="18" y="704" width="144" height="34" rx="6" fill="#fff" stroke="#dfe3e7"/>
+<text x="45" y="726" font-size="13" fill="#5b6570">◉  联系客服</text>
+<rect x="180" width="1020" height="64" fill="#fff" stroke="#e4e6e8"/>
+<rect x="860" y="14" width="230" height="36" rx="7" fill="#fff" stroke="#dfe3e7"/>
+<text x="884" y="37" font-size="13" fill="#9aa2ab">⌕  搜索账号、礼品卡、服务...</text>
+<rect x="1102" y="14" width="82" height="36" rx="7" fill="#f7f7f8"/>
+<text x="1120" y="37" font-size="13" fill="#25313d">订单查询</text>
+<g transform="translate(220,96)">
+<rect width="920" height="250" rx="5" fill="#fff" stroke="#dfe3e7"/>
+<rect x="0" y="0" width="520" height="250" fill="#fff"/>
+<text x="34" y="62" font-size="34" font-weight="700" fill="#101820">买账号，就找号小二</text>
+<text x="34" y="102" font-size="17" fill="#66727e">精选 Gmail、Apple ID、Telegram、WhatsApp 等数字</text>
+<text x="34" y="131" font-size="17" fill="#66727e">账号，以及礼品卡与海外通信产品。实时库存、批量采</text>
+<text x="34" y="160" font-size="17" fill="#66727e">购，付款后极速交付。</text>
+<rect x="34" y="190" width="126" height="38" rx="6" fill="#f45b16"/>
+<text x="51" y="215" font-size="14" font-weight="700" fill="#fff">浏览全部商品 →</text>
+<rect x="174" y="190" width="120" height="38" rx="6" fill="#fff" stroke="#dfe3e7"/>
+<text x="191" y="215" font-size="14" fill="#25313d">查看热销精选</text>
+<rect x="520" width="400" height="250" fill="#fff4ed"/>
+<rect x="620" y="72" width="160" height="112" rx="18" fill="#ffd39f" stroke="#f4a340" stroke-width="7"/>
+<rect x="650" y="101" width="100" height="32" rx="5" fill="#fff"/>
+<text x="665" y="123" font-size="14" fill="#6b7279">成功兑换</text>
+<circle cx="835" cy="90" r="29" fill="#ffad46"/><path d="m821 90 10 10 18-25" fill="none" stroke="#fff" stroke-width="6"/>
+<rect y="250" width="920" height="68" fill="#fff" stroke="#e6e8ea"/>
+<g font-size="13" fill="#68737d"><text x="36" y="281" font-size="27" font-weight="700" fill="#111820">7</text><text x="67" y="281">累计订单</text><text x="266" y="281" font-size="27" font-weight="700" fill="#111820">9</text><text x="297" y="281">在售商品</text><text x="496" y="281" font-size="27" font-weight="700" fill="#111820">0 秒</text><text x="565" y="281">平均发货</text><text x="736" y="281" font-size="27" font-weight="700" fill="#111820">100%</text><text x="810" y="281">自动发货率</text></g>
+</g>
+<text x="220" y="410" font-size="24" font-weight="700" fill="#101820">探索商品分类</text>
+<text x="220" y="436" font-size="14" fill="#78828d">按场景浏览，快速找到适合你的规格</text>
+<rect x="220" y="458" width="920" height="170" fill="#fff" stroke="#dfe3e7"/>
+<g font-size="16" font-weight="700" fill="#17202a">
+<text x="260" y="500">✉  邮箱账号</text><text x="570" y="500">●  Apple ID</text><text x="880" y="500">➤  社交账号</text>
+<text x="260" y="560">♧  礼品卡密</text><text x="570" y="560">↗  粉丝增长</text><text x="880" y="560">▣  AI 工具</text>
+<text x="260" y="620">▯  海外手机卡</text><text x="570" y="620">♔  休闲娱乐</text><text x="880" y="620">＋ 更多商品</text>
+</g>
+<g stroke="#e5e7e9"><path d="M220 515h920M220 575h920M527 458v170M837 458v170"/></g>
+</svg>
