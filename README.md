@@ -44,7 +44,7 @@
 
 想了解更多海外数字账号、Gmail 邮箱、Apple ID、X Premium、Telegram 会员等相关资讯，可以进入下面的资讯专栏，查看更多使用指南和实用内容。
 
-[进入号小二 GitHub 文章专栏 →](/haoxiaoer/haoxiaoer.github.io/blob/main/articles/README.md)
+[进入号小二 GitHub 文章专栏 →](https://github.com/haoxiaoer/haoxiaoer.github.io/blob/main/articles/README.md)
 
 ## 购买前检查清单
 
