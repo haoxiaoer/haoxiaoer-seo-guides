@@ -1,37 +1,13 @@
-# 号小二 GitHub 文章专栏
+# 号小二文章专栏
 
-这里收录直接发布在 GitHub 仓库中的号小二文章。每篇内容都会单独保存为 Markdown 文件，并按主题归档，打开链接即可直接阅读。
+这里整理号小二发布的海外数字账号、数字商品和跨境通信相关文章，点击标题即可阅读全文。
 
-[返回仓库首页](../README.md) · [访问号小二官方网站](https://www.haoxiaoer.com/)
+## 海外账号与数字服务
 
-## 文章系列
+- [号小二怎么样？海外数字账号一站式购买平台体验分享](https://github.com/haoxiaoer/haoxiaoer.github.io/blob/main/articles/overseas-accounts/haoxiaoer-platform-review.md)
 
-### 海外账号使用
+## 更多主题
 
-整理 Gmail、Apple ID、Telegram、WhatsApp 等海外账号的选择、登录、安全设置和常见问题。
+Gmail、Apple ID、礼品卡、海外手机卡、AI 工具和会员服务等内容，会按主题陆续整理。
 
-### 账号采购与团队管理
-
-整理个人购买、团队批量采购、账号资料交接和日常管理中容易忽略的细节。
-
-### 礼品卡与数字商品
-
-整理礼品卡地区限制、兑换前检查、充值流程以及常见数字商品的使用说明。
-
-### 海外手机卡与 eSIM
-
-整理实体 SIM 卡、eSIM、套餐激活、充值续费、设备兼容和跨境通信相关内容。
-
-### AI 工具与海外服务
-
-整理常用 AI 工具、海外订阅服务和相关账号的使用准备与注意事项。
-
-## 最新文章
-
-首篇 GitHub 文章会在标题和内容确认后发布，并同步加入上面的对应系列。
-
-## 关于号小二
-
-号小二提供海外账号、数字商品、礼品卡和跨境通信相关的商品入口与使用信息。库存、价格、地区限制和交付方式可能随商品变化，购买前请以[号小二官方网站](https://www.haoxiaoer.com/)当前页面为准。
-
-最后更新：2026-10-25
+[返回文章首页](https://github.com/haoxiaoer/haoxiaoer.github.io/blob/main/README.md) · [访问号小二官方网站](https://www.haoxiaoer.com/)
